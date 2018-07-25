@@ -8,7 +8,7 @@
 
 import Foundation
 import Photos
-class QAlbumAssetCollections:NSObject{
+open class QAlbumAssetCollections:NSObject{
 //    public enum PHAssetCollectionType : Int {
 //        case album
 //        case smartAlbum

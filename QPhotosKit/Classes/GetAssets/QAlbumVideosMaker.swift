@@ -9,7 +9,7 @@
 import Foundation
 import Photos
 
-class QAlbumVideosMaker:NSObject{
+open class QAlbumVideosMaker:NSObject{
     
     class func getVideosWithAssets(_ assets:PHFetchResult<PHAsset>) -> [(AVAsset,URL)]? {
         var container:[(AVAsset,URL)] = []

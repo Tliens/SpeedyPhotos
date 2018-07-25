@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Photos
 
-class QAlbumMaker:NSObject{
+open class QAlbumMaker:NSObject{
     
     /// make album
     ///if had exit one,return ; else creat one

@@ -9,7 +9,7 @@
 import Foundation
 import Photos
 
-class QAlbumSaveImage:NSObject{
+open class QAlbumSaveImage:NSObject{
     /// save image
     /// photos permission resquest
     /// creat album , if don't exit,else return one

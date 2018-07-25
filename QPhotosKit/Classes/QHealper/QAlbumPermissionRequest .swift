@@ -9,7 +9,7 @@
 import Foundation
 import Photos
 
-class QAlbumPermissionRequest : NSObject {
+open class QAlbumPermissionRequest : NSObject {
     class func requestPhotosPermision(completed: ((_ error:Error?)->())?){
         let authStatus = PHPhotoLibrary.authorizationStatus()
         // .notDetermined .authorized .restricted .denied

@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 import Photos
 
-enum QAlbumImageQuality{
+public enum QAlbumImageQuality{
     case low
     case middle
     case height
 }
 
-let ThumbnailSize = CGSize.init(width: 80, height: 80)
-let QAlbumImgMaxSize = PHImageManagerMaximumSize
+public let ThumbnailSize = CGSize.init(width: 80, height: 80)
+public let QAlbumImgMaxSize = PHImageManagerMaximumSize

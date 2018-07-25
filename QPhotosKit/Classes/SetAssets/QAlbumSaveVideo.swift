@@ -8,7 +8,7 @@
 
 import Foundation
 import Photos
-class QAlbumSaveVideo: NSObject {
+open class QAlbumSaveVideo: NSObject {
     /// save video with url
     /// photos permission resquest
     /// creat album , if don't exit,else return one

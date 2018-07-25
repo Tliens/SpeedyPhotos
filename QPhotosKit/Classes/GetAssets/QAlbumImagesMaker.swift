@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Photos
 
-class QAlbumImagesMaker:NSObject{
+open class QAlbumImagesMaker:NSObject{
     
     class func getImagesWithAssets(_ assets:PHFetchResult<PHAsset>,quality:QAlbumImageQuality,thumbnailSize:CGSize = ThumbnailSize)->[UIImage]{
         var container:[UIImage] = []
