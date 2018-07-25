@@ -16,7 +16,7 @@ open class QAlbumSaveVideo: NSObject {
     ///   - path: url
     ///   - album: album name
     ///   - completed: if success, error is nil,else save failed
-    class func saveVideoWithURL(_ url:URL,album:String,completed: ((_ error:Error?)->())?){
+    open class func saveVideoWithURL(_ url:URL,album:String,completed: ((_ error:Error?)->())?){
         //MARK: - creat Album
         QAlbumMaker.creatAlbum(name: album, completed: { (collection, error) in
             if let error = error {
@@ -34,7 +34,7 @@ open class QAlbumSaveVideo: NSObject {
             }
         })
     }
-    class func saveVideo(url:URL,collection:PHAssetCollection,completed: ((_ error:Error?)->())?) {
+    open class func saveVideo(url:URL,collection:PHAssetCollection,completed: ((_ error:Error?)->())?) {
         
         //MARK: - save Image with url
         PHPhotoLibrary.shared().performChanges({

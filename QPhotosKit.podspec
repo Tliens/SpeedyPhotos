@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "QPhotosKit"
-s.version      = "0.2"
+s.version      = "0.3.1"
 s.summary      = "you can use phots by QPhotosKit"
 s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -23,7 +23,7 @@ s.ios.deployment_target = '10.0'
 s.swift_version         = '4.0'
 s.requires_arc          = true
 s.static_framework      = true
-s.source_files          = ["QPhotosKit",'QPhotosKit/**/*.{swift,h}']
+s.source_files          = ['QPhotosKit/Classes/**/*.{swift,h}']
 s.pod_target_xcconfig = {
 'OTHER_SWIFT_FLAGS'           => '-DGLES',
 }

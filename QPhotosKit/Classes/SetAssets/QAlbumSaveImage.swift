@@ -17,7 +17,7 @@ open class QAlbumSaveImage:NSObject{
     ///   - image: UIImage
     ///   - album: album name
     ///   - completed: if success, error is nil,else save failed
-    class func saveImage(_ image:UIImage,album:String,completed: ((_ error:Error?)->())?) {
+    open class func saveImage(_ image:UIImage,album:String,completed: ((_ error:Error?)->())?) {
         //MARK: - creat Album
         QAlbumMaker.creatAlbum(name: album, completed: { (collection, error) in
             if let error = error {
@@ -43,7 +43,7 @@ open class QAlbumSaveImage:NSObject{
     ///   - path: local path in sandbox
     ///   - album: album name
     ///   - completed: if success, error is nil,else save failed
-    class func saveImageWithLocalPath(_ path:String,album:String,completed: ((_ error:Error?)->())?){
+    open class func saveImageWithLocalPath(_ path:String,album:String,completed: ((_ error:Error?)->())?){
         let image = UIImage.init(contentsOfFile: path)
         if let img = image {
             saveImage(img, album: album, completed: completed)
@@ -59,7 +59,7 @@ open class QAlbumSaveImage:NSObject{
     ///   - path: url
     ///   - album: album name
     ///   - completed: if success, error is nil,else save failed
-    class func saveImageWithURL(_ url:URL,album:String,completed: ((_ error:Error?)->())?){
+    open class func saveImageWithURL(_ url:URL,album:String,completed: ((_ error:Error?)->())?){
         //MARK: - creat Album
         QAlbumMaker.creatAlbum(name: album, completed: { (collection, error) in
             if let error = error {
@@ -77,7 +77,7 @@ open class QAlbumSaveImage:NSObject{
             }
         })
     }
-    class func saveImage(url:URL,collection:PHAssetCollection,completed: ((_ error:Error?)->())?) {
+    open class func saveImage(url:URL,collection:PHAssetCollection,completed: ((_ error:Error?)->())?) {
         
         //MARK: - save Image with url
         PHPhotoLibrary.shared().performChanges({
@@ -90,7 +90,7 @@ open class QAlbumSaveImage:NSObject{
             completed?(error)
         }
     }
-    class func saveImage(image:UIImage,collection:PHAssetCollection,completed: ((_ error:Error?)->())?) {
+    open class func saveImage(image:UIImage,collection:PHAssetCollection,completed: ((_ error:Error?)->())?) {
         
         //MARK: - save Image with image
         PHPhotoLibrary.shared().performChanges({

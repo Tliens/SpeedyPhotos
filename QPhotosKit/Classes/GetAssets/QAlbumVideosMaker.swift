@@ -11,7 +11,7 @@ import Photos
 
 open class QAlbumVideosMaker:NSObject{
     
-    class func getVideosWithAssets(_ assets:PHFetchResult<PHAsset>) -> [(AVAsset,URL)]? {
+    open class func getVideosWithAssets(_ assets:PHFetchResult<PHAsset>) -> [(AVAsset,URL)]? {
         var container:[(AVAsset,URL)] = []
 
         assets.enumerateObjects({ (asset, index, _) in
@@ -24,7 +24,7 @@ open class QAlbumVideosMaker:NSObject{
         return container
     }
     
-    class func getVideoWithAsset(_ asset:PHAsset) -> (AVAsset,URL)? {
+    open class func getVideoWithAsset(_ asset:PHAsset) -> (AVAsset,URL)? {
         let options = getPHVideoRequestOptions()
         options.progressHandler = { (progress,_,_,_) in
             print("正在下载,进度为\(progress * 100)%")
@@ -51,7 +51,7 @@ open class QAlbumVideosMaker:NSObject{
         return (avAsset,videoURL)
     }
 
-    class func getPHVideoRequestOptions()->PHVideoRequestOptions{
+    open class func getPHVideoRequestOptions()->PHVideoRequestOptions{
         let options = PHVideoRequestOptions()
         options.isNetworkAccessAllowed = true
         options.deliveryMode = .highQualityFormat

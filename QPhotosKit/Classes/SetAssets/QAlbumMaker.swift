@@ -18,7 +18,7 @@ open class QAlbumMaker:NSObject{
     /// - Parameters:
     ///   - name: album name
     ///   - completed: assetCollection:PHAssetCollection ,error
-    class func makerAlbum(name:String,completed: ((_ assetCollection:PHAssetCollection?,_ error:Error?)->())?) {
+    open class func makerAlbum(name:String,completed: ((_ assetCollection:PHAssetCollection?,_ error:Error?)->())?) {
         getAlbum(name: name) { (collection, error) in
             if let _ = error {
                 creatAlbum(name: name, completed: { (collection, error) in
@@ -32,7 +32,7 @@ open class QAlbumMaker:NSObject{
     
     /// get album
     /// search album and return it or nil
-    class func getAlbum(name:String,completed: ((_ assetCollection:PHAssetCollection?,_ error:Error?)->())?) {
+    open class func getAlbum(name:String,completed: ((_ assetCollection:PHAssetCollection?,_ error:Error?)->())?) {
         let fetchOptions = PHFetchOptions()
         fetchOptions.predicate = NSPredicate.init(format: "title = %@", name)
         let collection : PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
@@ -44,7 +44,7 @@ open class QAlbumMaker:NSObject{
     }
     /// creat album
     /// creat album and return it
-    class func creatAlbum(name:String,completed: ((_ assetCollection:PHAssetCollection?,_ error:Error?)->())?) {
+    open class func creatAlbum(name:String,completed: ((_ assetCollection:PHAssetCollection?,_ error:Error?)->())?) {
         let fetchOptions = PHFetchOptions()
         fetchOptions.predicate = NSPredicate.init(format: "title = %@", name)
         PHPhotoLibrary.shared().performChanges({
