@@ -14,7 +14,7 @@
 		E4573AD9210849F60051CE8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4573AD7210849F60051CE8A /* LaunchScreen.storyboard */; };
 		E4573B0421084A430051CE8A /* QAlbumImagesMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4573AF921084A430051CE8A /* QAlbumImagesMaker.swift */; };
 		E4573B0521084A430051CE8A /* QAlbumAssetCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4573AFA21084A430051CE8A /* QAlbumAssetCollections.swift */; };
-		E4573B0621084A430051CE8A /* QAblumAssetsMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4573AFB21084A430051CE8A /* QAblumAssetsMaker.swift */; };
+		E4573B0621084A430051CE8A /* QAlbumAssetsMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4573AFB21084A430051CE8A /* QAlbumAssetsMaker.swift */; };
 		E4573B0721084A430051CE8A /* QAlbumVideosMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4573AFC21084A430051CE8A /* QAlbumVideosMaker.swift */; };
 		E4573B0821084A430051CE8A /* QAlbumSaveImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4573AFE21084A430051CE8A /* QAlbumSaveImage.swift */; };
 		E4573B0921084A430051CE8A /* QAlbumSaveVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4573AFF21084A430051CE8A /* QAlbumSaveVideo.swift */; };
@@ -33,7 +33,7 @@
 		E4573ADA210849F60051CE8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4573AF921084A430051CE8A /* QAlbumImagesMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAlbumImagesMaker.swift; sourceTree = "<group>"; };
 		E4573AFA21084A430051CE8A /* QAlbumAssetCollections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAlbumAssetCollections.swift; sourceTree = "<group>"; };
-		E4573AFB21084A430051CE8A /* QAblumAssetsMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAblumAssetsMaker.swift; sourceTree = "<group>"; };
+		E4573AFB21084A430051CE8A /* QAlbumAssetsMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAlbumAssetsMaker.swift; sourceTree = "<group>"; };
 		E4573AFC21084A430051CE8A /* QAlbumVideosMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAlbumVideosMaker.swift; sourceTree = "<group>"; };
 		E4573AFE21084A430051CE8A /* QAlbumSaveImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAlbumSaveImage.swift; sourceTree = "<group>"; };
 		E4573AFF21084A430051CE8A /* QAlbumSaveVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QAlbumSaveVideo.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			children = (
 				E4573AF921084A430051CE8A /* QAlbumImagesMaker.swift */,
 				E4573AFA21084A430051CE8A /* QAlbumAssetCollections.swift */,
-				E4573AFB21084A430051CE8A /* QAblumAssetsMaker.swift */,
+				E4573AFB21084A430051CE8A /* QAlbumAssetsMaker.swift */,
 				E4573AFC21084A430051CE8A /* QAlbumVideosMaker.swift */,
 			);
 			path = GetAssets;
@@ -204,7 +204,7 @@
 				E4573B0421084A430051CE8A /* QAlbumImagesMaker.swift in Sources */,
 				E4573B0A21084A430051CE8A /* QAlbumMaker.swift in Sources */,
 				E4573B0821084A430051CE8A /* QAlbumSaveImage.swift in Sources */,
-				E4573B0621084A430051CE8A /* QAblumAssetsMaker.swift in Sources */,
+				E4573B0621084A430051CE8A /* QAlbumAssetsMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

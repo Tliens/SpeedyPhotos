@@ -15,8 +15,10 @@ open class QAlbumAssetCollections:NSObject{
 //        case moment
 //    }
     /// get all assets collection (input output（理解为：） all albums)
-    open class func getAssetCollections(_ name:String)->PHFetchResult<PHAssetCollection>{
+    open class func getAssetCollections()->PHFetchResult<PHAssetCollection>{
         let result = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .albumRegular, options: nil)
+
         return result
     }
+
 }

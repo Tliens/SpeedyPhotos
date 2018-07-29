@@ -9,7 +9,7 @@
 import Foundation
 import Photos
 
-open class QAblumAssetsMaker: NSObject {
+open class QAlbumAssetsMaker: NSObject {
     /// get assets
     /// when ascending is false , return asset'creationDate such as [20,19,18,17,16,15]
     open class func getAlbumAssets(albumName:String,ascending:Bool)->PHFetchResult<PHAsset>?{
@@ -20,6 +20,13 @@ open class QAblumAssetsMaker: NSObject {
         }else{
             return nil
         }
+    }
+    
+    open class func getAlbumAssets(collection:PHAssetCollection,ascending:Bool)->PHFetchResult<PHAsset>?{
+        let fetchOptions = getPHFetchOptions(ascending: ascending)
+        let assets = PHAsset.fetchAssets(in: collection, options: fetchOptions)
+        return assets
+        
     }
     
     /// get PHAssetCollection with name,return first

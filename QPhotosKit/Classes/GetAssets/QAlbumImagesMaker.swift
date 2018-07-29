@@ -13,6 +13,7 @@ import Photos
 open class QAlbumImagesMaker:NSObject{
     
     open class func getImagesWithAssets(_ assets:PHFetchResult<PHAsset>,quality:QAlbumImageQuality,thumbnailSize:CGSize = ThumbnailSize)->[UIImage]{
+        //可能会引起 内存溢出 不建议在controller中持有 [UIImage] 建议持有 PHAsset ，需要时请求Image
         var container:[UIImage] = []
         assets.enumerateObjects({ (asset, index, _) in
             if let img = getImageWithAsset(asset,quality:quality,thumbnailSize:thumbnailSize){
@@ -42,7 +43,7 @@ open class QAlbumImagesMaker:NSObject{
     /// get images
     /// when ascending is false , return asset'creationDate such as [20,19,18,17,16,15]
     open class func getImagesWith(albumName:String,ascending:Bool,thumbnailSize:CGSize = ThumbnailSize)->[UIImage]?{
-        if let assets = QAblumAssetsMaker.getAlbumAssets(albumName: albumName, ascending: ascending){
+        if let assets = QAlbumAssetsMaker.getAlbumAssets(albumName: albumName, ascending: ascending){
             let images = getImagesWithAssets(assets, quality: .height)
             return images
         }else{
